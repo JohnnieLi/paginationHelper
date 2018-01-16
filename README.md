@@ -96,7 +96,7 @@ If want to add select page size function
 
 
 ## Full paginationHelper.ts
-```
+```typescript
 export class PaginationHelper {
 
     public page = 1;
