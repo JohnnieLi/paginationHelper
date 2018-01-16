@@ -2,17 +2,19 @@
 Only demo for pagination helper class, not compoleted project.
 
 ## Structure
- ├── ...
+    .
+    ├── ...
     ├── app                    
-    │   ├── app.component.ts     #import helper.ts       
-    │   ├── app.component.css      
-    │   └── app.component.html                
-    └── helpers
-        ├── pagination.helper.ts  
-
+    │   ├── app.component.ts              
+    │   ├── app.component.css             
+    │   ├── app.component.css                      
+    │   └── ...               
+    ├── helpers                    
+    │   ├── pagination.helper.ts
+     
 ## How to use
 
-###ts file, such as app.component.ts
+### ts file, such as app.component.ts
 
 1.import helper class
 
@@ -43,7 +45,7 @@ ngOnInit() {
                 this.nPHelper.initPageHelper(this.normalUsers);
             }
         );
-        .....
+        ...
 }
 ```
 OR
@@ -91,9 +93,8 @@ If want to add select page size function
 ```
 
 
-## Full pageinationHelper.ts
+## Full paginationHelper.ts
 ```
-
 export class PaginationHelper {
 
     public page = 1;
