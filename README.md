@@ -25,6 +25,8 @@ import {PaginationHelper} from './helpers/pagination.helper';
 ```typescript
 export class AppComponent implements OnInit {
 
+    public normalUsers: any[];
+    public businessUsers: any[];
     public nPHelper: PaginationHelper;
     public bPHelper: PaginationHelper
 
@@ -35,7 +37,7 @@ export class AppComponent implements OnInit {
     ...
 }
 ```
-3. set original Data 
+3. set original Data, any[]
 ```typescript
 ngOnInit() {
      this.service.getSomeUsers().subscribe(
