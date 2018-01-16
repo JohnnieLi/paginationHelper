@@ -1,0 +1,25 @@
+
+                    <div class="card-header">users</div>
+                    <table class="card-body table table-hover">
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr *ngFor="let user of nPHelper.pageItems">
+                            <th scope="row">{{i+1}}</th>
+                            <td>{{user.Name}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <select (change)="nPHelper.pageSizeChange($event.target.value)">
+                            <option value= 10>10</option>
+                            <option value= 30>30</option>
+                            <option value= 50>50</option>
+                            </select> /perPage
+                    <ngb-pagination [pageSize]="nPHelper.pageSize" [collectionSize]="nPHelper.collectionSize"
+                                    [(page)]="nPHelper.page" (pageChange)="nPHelper.pageChange($event)" aria-label="Default pagination"></ngb-pagination>
+                </div>
+
